@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="resources/underscore.js"></script>
+        <link rel="stylesheet" type="text/css" href="game_of_life.css">
+    </head>
+
+    <body>
+        <div id="game-type-header">
+            <!-- Drop down menu to select which initialization to run -->
+            <span class="game-option">
+                <span>Choose an example game</span>
+                <span>
+                    <select id="initial-state-chooser">
+                        <option>Still Life</option>
+                        <option>Oscillator</option>
+                        <option>Glider</option>
+                        <option>6.170</option>
+                        <option>Cake</option>
+                    </select>
+                    <button id="choose-game-of-life">Go!</button>
+                </span>
+            </span>
+
+            <span id="or"><i>OR</i></span>
+
+            <span class="game-option">
+                <span>Make your own game! With </span>
+                <form id="resize-grid">
+                    <input id="num-rows" type="number" min="1" max="50" required="true" value="5"/>
+                    <span>rows and</span>
+                    <input id="num-cols" type="number" min="1" max="50" required="true" value="5"/>
+                    <span>columns.</span>
+                    <input type="submit" value="Go!"/>
+                </form>
+            </span>
+        </div>
+
+        <div id="grid-container">
+            <!-- define the HTML canvas element that will hold the graphical output -->
+            <div id="canvas-container"></div>
+
+            <div id="button-panel">
+                <button id="run-game-of-life">Run</button>
+                <button id="end-game-of-life">End</button>
+                <span id="speed-container">
+                    <span id="speed-label">Speed</span>
+                    <input id="speed" type="range" min="0" max="2500" step="250"/>
+                </span>
+            </div>
+        </div>
+
+        <div id="signature">
+            <div id="game-title"><b>Conway's Game Of Life</b></div>
+            <div id="game-subtitle">as implemented by
+                <span id="my-name">Lily Seropian</span>
+            </div>
+        </div>
+        
+        <script>var TIME_STEP = 500;</script>
+        <script src="game_of_life_examples.js"></script>
+        <!-- Run the Game Of Life -->
+        <script src="game_of_life.js"></script>
+        <script src="game_of_life_graphics.js"></script>
+        <!-- Add handlers for the various game controls -->
+        <script>
+            add_controls(new game_of_life());
+            make_grid(5, 5);
+        </script>
+
+    </body>
+</html>

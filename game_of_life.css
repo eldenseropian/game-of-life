@@ -1,0 +1,116 @@
+
+body {
+    color: #D93A58; /*hot pink*/
+    font-family: "Century Gothic", sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+/**********************************************/
+/* Options for example game vs user-made game */
+/**********************************************/
+
+
+#game-type-header {
+    background: #ECE5CE; /*sandstone*/
+    border-bottom: 2px solid;
+    margin-bottom: 1.5em;
+}
+
+.game-option {
+    background: white;
+    border: 2px solid;
+    border-bottom: none;
+    display: inline-block;
+    margin: 1em .5em 0 .5em;
+    padding: 1em;
+    width: 31em;
+    
+}
+
+#or {
+    background: #FFD0A0; /*orange*/
+    border-radius: 2em;
+    box-shadow: 0px 0px 5px #774F38; /*brown*/
+    padding: .85em;
+}
+
+#num-rows, #num-cols {
+    width: 3em;
+}
+
+#resize-grid {
+    display: inline-block;
+}
+
+/*******************/
+/* The game itself */
+/*******************/
+
+#grid-container {
+    background: #C5E0DC; /*pale blue-green*/
+    border-radius: .25em;
+    box-shadow: 0px 0px 10px #774F38; /*brown*/
+    height: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    position: relative;
+    width: 400px;
+}
+
+#game-table {
+    border-collapse: collapse;
+    border-color: #774F38; /*brown*/
+    margin: 0 auto;
+}
+
+#game-table td {
+    background: white;
+    border-width: 2px;
+}
+
+#game-table .alive {
+    background: #7DA768; /*light green*/
+}
+
+#button-panel {
+    margin: .5em;
+}
+
+#button-panel {
+    bottom: .5em;
+    position: absolute;
+}
+
+#button-panel button {
+    font-family: "Century Gothic", sans-serif;
+}
+
+#speed-container {
+    margin-left: 7.5em;
+}
+
+/***************/
+/* Information */
+/***************/
+
+#signature {
+    margin-top: 1em;
+}
+
+#game-title {
+    color: #774F38; /*brown*/
+    font-family: Monaco, monospace;
+    font-size: 1.75em;
+}
+
+#game-subtitle {
+    color: #FFD0A0; /*orange*/
+    font-size: 1.25em;
+    margin-top: .25em;
+}
+
+#my-name {
+    color: #D93A58; /*hot pink*/
+}
